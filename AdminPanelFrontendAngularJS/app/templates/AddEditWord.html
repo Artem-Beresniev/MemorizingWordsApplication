@@ -1,0 +1,32 @@
+﻿<h3>{{pageTitle}}</h3>
+
+<form>
+    Word: <input type="text" ng-model="word"/><br />
+
+    Language:
+    <select ng-model="selectedLanguageId"
+            ng-options="language.id as language.label for language in languages"></select><br/>
+
+    Translate to language:
+    <select ng-model="selectedTranslateToLanguageId"
+            ng-options="translateToLanguage.id as translateToLanguage.label for translateToLanguage in translateToLanguages"></select><br />
+
+
+    <br/><button ng-click="fillAutomatically">Fill the following fields automatically</button><br/>
+    Translations:<br/>
+    <textarea ng-model="translations"></textarea><br />
+
+    Definitions:<br/>
+    <textarea ng-model="definitions"></textarea><br />
+
+    <input type="checkbox" ng-model="hasForms"> Has forms? If not a verb this field shall usually be unchecked.<br />
+
+    Forms:<br />
+    <input type="text" ng-model="firstForm" ng-disabled="!hasForms"/> - <input type="text" ng-model="secondForm" ng-disabled="!hasForms"/> - <input type="text" ng-model="thirdForm" ng-disabled="!hasForms"/><br />
+
+    <br/>Context: <button>Select</button><br />
+
+    <button>Save</button> <button>Cancel</button><br/>
+
+</form>
+

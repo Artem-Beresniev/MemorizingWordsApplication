@@ -1,0 +1,11 @@
+﻿<h3>Words</h3>
+
+<div>
+    <input id="inputEmail" placeholder="Search by name or date" ng-model="searchFieldText" autofocus>
+    <button ng-click="searchBtnClicked()">Search</button> &nbsp;&nbsp;<a href="" ng-click="addWord()">Add Word</a>
+</div>
+
+
+<div style="margin-top: 20px;" ng-repeat="word in words | filter:{label : searchQuery}">
+    <div><a ng-href="/#/words/{{word.id}}">{{word.label}}</a><a href="/#"><img ng-src="img\DeleteRedImg.png" /></a></div>
+</div>
