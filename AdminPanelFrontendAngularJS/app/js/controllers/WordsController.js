@@ -10,10 +10,6 @@
                 $scope.searchQuery = $scope.searchFieldText;
             };
 
-            $scope.addWord = function() {
-                //do nothing fo now
-            };
-
             $scope.words = [{
                 id: 1,
                 label: 'word1'

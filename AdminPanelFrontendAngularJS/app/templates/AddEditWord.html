@@ -17,7 +17,10 @@
     <textarea ng-model="translations"></textarea><br />
 
     Definitions:<br/>
-    <textarea ng-model="definitions"></textarea><br />
+    <textarea ng-model="definitions"></textarea><br/>
+
+    Usage examples:<br/>
+    <textarea ng-model="usageExamples"></textarea><br/>
 
     <input type="checkbox" ng-model="hasForms"> Has forms? If not a verb this field shall usually be unchecked.<br />
 
@@ -26,7 +29,7 @@
 
     <br/>Context: <button>Select</button><br />
 
-    <button>Save</button> <button>Cancel</button><br/>
+    <button>Save</button> <button ng-click="cancel()">Cancel</button><br/>
 
 </form>
 

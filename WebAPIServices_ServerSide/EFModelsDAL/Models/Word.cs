@@ -30,6 +30,18 @@ namespace EFModelsDAL.Models
         /// </summary>
         public string UsageExamples { get; set; }
 
+        /// <summary>
+        /// In some languages words can have several forms
+        /// (in English irregular verbs have three forms).
+        /// </summary>
+        public bool HasForms { get; set; }
+        
+        public string Form1 { get; set; }
+
+        public string Form2 { get; set; }
+
+        public string Form3 { get; set; }
+
         public int? ContextId { get; set; }
 
         public Context Context { get; set; } 

@@ -3,7 +3,7 @@
 
     wordsLearningApp.controller("AddEditWordController",
 
-        function addEditWordController($scope, $routeParams) {
+        function addEditWordController($scope, $routeParams, $location) {
 
             if ($routeParams.wordId) {
                 $scope.pageTitle = "Edit word";
@@ -42,6 +42,10 @@
             }];
 
             $scope.selectedTranslateToLanguageId = 3;
+
+            $scope.cancel = function() {
+                $location.path('/words');
+            }
 
         });
 })();
